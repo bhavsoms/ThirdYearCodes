@@ -1,11 +1,11 @@
-# ThirdYearCodes
-This repository contains source code for various projects in different subjects I completed during my third year of engineering studies in 2024. It covers diverse areas from core subjects:
-
-
-- **Artificial Neural Networks (ANN)**: Implementations of neural network architectures (e.g., Perceptron, Multi-Layer Perceptron, Convolutional Neural Networks) for classification, regression, or image recognition tasks (code may utilize libraries like TensorFlow, PyTorch, Keras).
-
-- **R Programming**: Scripts demonstrating data manipulation, analysis, and visualization using the R programming language. This could include data cleaning, statistical modeling, or creating insightful visualizations with packages like ggplot2.
-
-- **Machine Learning:** Exploration of machine learning concepts through code for supervised learning (e.g., linear regression, decision trees, support vector machines), unsupervised learning (e.g., k-means clustering), or reinforcement learning techniques.
-
-- **Data Analysis and Visualization:** Code for exploring, analyzing, and cleaning datasets, potentially involving libraries like pandas (Python) or data.table (R) for manipulation, and libraries like Matplotlib (Python) or ggplot2 (R) for creating informative visualizations.
+# Machine Learning
+- **NumPy & Pandas**: Implementations using these libraries for data manipulation and analysis (array operations, dataframes).
+- **Linear Regression**: Building and evaluating linear regression models with Python libraries (Scikit-learn).
+- **Logistic Regression**: Implementing logistic regression for classification tasks using NumPy and Pandas.
+- **Gradient Descent**: Applying gradient descent for optimization in linear regression models.
+- **K-Nearest Neighbors (KNN)**: KNN classification using NumPy and Pandas.
+- **Decision Trees**: Implementing decision trees with Scikit-learn for classification tasks.
+- **Support Vector Machines (SVM)**: Utilizing Scikit-learn to build SVM models for classification.
+- **Random Forest**: Implementing random forest algorithms with Scikit-learn for classification and regression.
+- **K-Means Clustering**: Applying K-means clustering for unsupervised learning using Scikit-learn.
+- **Principal Component Analysis (PCA)**: Performing dimensionality reduction and data visualization with PCA using Scikit-learn.
