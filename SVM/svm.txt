@@ -1,0 +1,29 @@
+Support Vector Machines (SVM) Theory
+Support Vector Machines (SVMs) are a powerful machine learning algorithm for classification tasks. They aim to find a hyperplane in the feature space that best separates the data points belonging to different classes.
+
+Key Concepts:
+
+Feature Space: The space where data points are represented by their features. In your example, this space has two dimensions: age and estimated salary.
+Hyperplane: A multidimensional plane that separates data points of different classes. In 2D space, it's a line.
+Support Vectors: These are the data points closest to the hyperplane on either side of the margin. They essentially define the hyperplane and influence its position.
+Margin: The distance between the hyperplane and the closest support vectors from both classes. A larger margin indicates a better separation between the classes.
+SVM Training Process:
+
+Data Preprocessing: Features might be scaled or normalized to ensure they contribute equally to the distance calculations.
+Hyperplane Optimization: The SVM algorithm tries to find a hyperplane that maximizes the margin between the classes. This involves finding the optimal weights and bias for a linear equation that defines the hyperplane.
+Kernel Functions (for non-linear cases): When the data is not linearly separable in the original feature space, SVM can use kernel functions to project the data points into a higher-dimensional space where linear separation becomes possible. The RBF (Radial Basis Function) kernel used in your code is a common choice.
+SVM Predictions:
+
+Once trained, the SVM model can predict the class label (0 or 1 in your case) for a new data point by calculating its distance from the hyperplane. The class on the side of the hyperplane with a larger distance is the predicted class.
+
+Advantages of SVMs:
+
+Effective for high-dimensional data: Can handle data with many features without overfitting as much as other algorithms.
+Good performance: Can achieve high accuracy on classification tasks.
+Interpretability: The support vectors can provide some insights into the model's decision-making process.
+Disadvantages of SVMs:
+
+Training time: Can be slower to train compared to some other algorithms, especially for large datasets.
+Kernel choice: Selecting the right kernel function can be crucial for performance.
+Not ideal for regression: Primarily used for classification tasks.
+Overall, SVMs are a versatile and powerful tool for classification problems. By understanding the concepts of feature space, hyperplanes, support vectors, and margins, you can gain a deeper insight into how they work.

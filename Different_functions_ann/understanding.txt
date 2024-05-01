@@ -1,0 +1,30 @@
+Activation Functions
+
+These functions are essential components of artificial neural networks, determining the output of a neuron based on its input.
+
+Binary Function:
+
+f(x) = { 1 if x >= 0
+         { 0 if x < 0
+
+Linear Function:
+    f(x) = x
+
+Sigmoidal Function (Logistic Function):
+f(x) = 1 / (1 + e^(-x))
+
+Bipolar Sigmoidal Function:
+f(x) = (1 + e^(-x)) / (1 - e^(-x))
+
+Hyperbolic Tangent (tanh):
+f(x) = tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))
+
+Rectified Linear Unit (ReLU):
+f(x) = max(0, x)
+
+Leaky ReLU:
+f(x) = { x if x >= 0
+         { α * x if x < 0  (where α is a small constant, typically around 0.01)
+
+Softmax Function (for multiple classes):
+f(x_i) = e^(x_i) / Σ(e^(x_j)) (for i = 1, 2, ..., K; K is the number of classes)

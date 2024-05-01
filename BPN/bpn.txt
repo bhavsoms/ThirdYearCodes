@@ -1,0 +1,21 @@
+Theory and Math Behind Backpropagation Neural Network (BPN):
+
+BPN is a supervised learning algorithm used for training artificial neural networks. It's particularly effective for solving classification problems. Here's a breakdown of the key concepts:
+
+1. Feedforward Pass:
+
+Input Layer: Receives the input data (X in the code).
+Hidden Layer(s): Applies a nonlinear activation function (sigmoid in this case) to transform the weighted sum of inputs from the previous layer. This introduces non-linearity for complex decision boundaries.
+Output Layer: Produces the final predicted output (A2 in the code).
+2. Error Calculation:
+
+Compares the network's prediction (A2) with the ground truth labels (y_train).
+Mean Squared Error (MSE) is used for multi-class classification, calculating the average squared difference between predicted and actual values.
+3. Backpropagation:
+
+Propagates the error backward, layer by layer, to update the weights (W1 and W2) that contribute to the error.
+Output Layer Error: Calculated as the difference between the output (A2) and the one-hot encoded target labels (y_train_one_hot).
+Hidden Layer Error: Propagated back using the chain rule, considering the error in the next layer (E1) and the activation function derivative (1 - A2 for sigmoid).
+4. Weight Update:
+
+Updates weights based on the learning rate (controls the magnitude of the weight change) and the gradients (dW1 and dW2) calculated during backpropagation. These gradients indicate how much a change in the weight would affect the error.

@@ -1,0 +1,62 @@
+Theory and Code Explanation
+
+This Python code implements a simple neural network model using the Perceptron Learning Rule to learn basic logic gates (AND and OR) and perform pattern association. Here's a breakdown of the code and the underlying concepts:
+
+1. Imports and Data Preparation:
+
+Python
+import numpy as np
+
+# Set A: Input Patterns
+x1 = np.array([1, 1, 1, 1, 1, 1]).reshape(6, 1)
+x2 = np.array([-1, -1, -1, -1, -1, -1]).reshape(6, 1)
+x3 = np.array([1, 1, -1, -1, 1, 1]).reshape(6, 1)
+x4 = np.array([-1, -1, 1, 1, -1, -1]).reshape(6, 1)
+
+# Set B: Target Patterns
+y1 = np.array([1, 1, 1]).reshape(3, 1)
+y2 = np.array([-1, -1, -1]).reshape(3, 1)
+y3 = np.array([1, -1, 1]).reshape(3, 1)
+y4 = np.array([-1, 1, -1]).reshape(3, 1)
+Use code with caution.
+content_copy
+numpy import: This line imports the NumPy library, which provides efficient array manipulation capabilities essential for neural network computations.
+Input patterns (Set A): x1, x2, x3, and x4 represent four different input patterns, each with six binary values (1 or -1). These can be thought of as features or inputs to the neural network. The reshape function ensures they are in column vector format (6 rows, 1 column).
+Target patterns (Set B): y1, y2, y3, and y4 represent the desired outputs (targets) for the corresponding input patterns. They also have a shape of (3 rows, 1 column).
+2. Printing Input and Target Patterns:
+
+Python
+print("Set A: Input Pattern, Set B: Target Pattern")
+# ... (printing code omitted for brevity)
+Use code with caution.
+content_copy
+This section prints the input and target patterns in a user-friendly format, making it easier to visualize the data.
+3. Weight Matrix Calculation:
+
+Python
+inputSet = np.concatenate((x1, x2, x3, x4), axis=1)
+targetSet = np.concatenate((y1.T, y2.T, y3.T, y4.T), axis=0)
+print("\nWeight matrix:")
+weight = np.dot(inputSet, targetSet)
+print(weight)
+Use code with caution.
+content_copy
+Concatenating input and target sets: inputSet combines the input patterns as columns in a single matrix. targetSet stacks the target patterns as rows in another matrix.
+Weight matrix calculation: The np.dot function performs matrix multiplication between inputSet and the transposed targetSet. This essentially calculates the weights for each connection between the input neurons and the output neuron. The resulting weight matrix weight captures the learned relationship between the input patterns and the desired outputs.
+4. Testing Input Patterns (Set A):
+
+Python
+print("\nTesting for input patterns: Set A")
+
+def testInputs(x, weight):
+    y = np.dot(weight.T, x)
+    y[y < 0] = -1
+    y[y >= 0] = 1
+    return np.array(y)
+
+# ... (printing output for each input pattern omitted for brevity)
+Use code with caution.
+content_copy
+testInputs function: This function takes an input pattern x and the weight matrix weight as arguments. It performs the following steps:
+y = np.dot(weight.T, x): Calculates the weighted sum of the input values using the weight matrix. The transposed weight matrix is used because we're multiplying across the columns of the weight matrix and the rows of the input vector.
+y[y < 0] = -1 and y[y >= 0] = 1: Applies a threshold activation function (often a step function in perceptrons). Here, values less than zero are set to -1, and values greater than or equal to zero are set to 1.

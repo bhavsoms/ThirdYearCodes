@@ -1,0 +1,68 @@
+Perceptron Learning Algorithm
+
+The perceptron is a simple algorithm for binary classification problems. It learns a linear decision boundary to separate the data into two classes.
+
+Step Function:
+
+This function classifies the perceptron's output:
+
+```
+step_function(x) = {
+  0 if x < 0
+  1 if x >= 0
+}
+```
+
+OR Gate with Perceptron
+
+The OR gate outputs 1 if any input is 1. The perceptron learns weights to achieve this behavior.
+
+Training Dataset (OR Gate):
+
+This dataset contains input-output pairs for the OR gate:
+
+```
+training_dataset = {
+  ([0, 0, 1], 0),  # Bias term (1) is included as input
+  ([0, 1, 1], 1),
+  ([1, 0, 1], 1),
+  ([1, 1, 1], 1)
+}
+```
+
+Training Process:
+
+1. Initialize random weights.
+2. Loop for a set number of epochs (iterations).
+3. In each epoch:
+    - Randomly pick a training sample (x, expected output).
+    - Calculate the dot product of weights and input (result).
+    - Compute the error (expected output - result).
+    - Update weights: weights += learning_rate * error * input
+4. After training, display results for each input and plot the error (optional).
+
+
+
+AND Gate with Perceptron
+
+Similar to the OR gate, the perceptron learns weights to correctly classify the AND gate inputs.
+
+Training Dataset (AND Gate):
+
+```
+training_dataset1 = {
+  ([0, 0, 1], 0),
+  ([0, 1, 1], 0),
+  ([1, 0, 1], 0),
+  ([1, 1, 1], 1)
+}
+```
+Training (AND Gate):
+
+The training process is identical to the OR gate, using the different training dataset.
+
+Mathematical Theory:
+
+- The perceptron learning rule updates weights based on the error, input, and learning rate.
+- The algorithm converges for linearly separable data (data perfectly separated by a line).
+- It learns a decision boundary to classify the data in the input space.
